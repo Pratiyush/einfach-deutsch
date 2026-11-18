@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Einfach Deutsch · Daily German Words</title>
+<meta name="description" content="Learn German vocabulary a few minutes a day: every word with its article, plural, level and a recording, from A1 to B2. Instagram, YouTube Shorts, Telegram and apps.">
+<meta property="og:title" content="Einfach Deutsch · Daily German Words">
+<meta property="og:description" content="German words a few minutes a day — der, die, das, plural and audio, A1 to B2.">
+<meta property="og:image" content="https://pratiyush.github.io/einfach-deutsch/logo.png">
+<meta property="og:url" content="https://pratiyush.github.io/einfach-deutsch/">
+<meta name="theme-color" content="#F6F7F9">
+<link rel="icon" href="logo.png">
+<style>
+:root{--bg:#F6F7F9;--fg:#16181D;--muted:#575B66;--line:#E3E6EC;--card:#FFFFFF;--blue:#1F5BD8;--blue-ink:#FFFFFF;--der:#1F5BD8;--die:#B91C1C;--das:#0B7A47;--paper:#FFFFFF;--paper-ink:#16181D;--paper-muted:#575B66;--soon:#EEF0F4;--soon-ink:#4A4F5A;
+  --a1:#0A7D4D;--a2:#1E5BFF;--b1:#6C3BF5;--b2:#1A1F4B;--flag1:#141414;--flag2:#DD0000;--flag3:#FFCE00}
+@media (prefers-color-scheme:dark){:root{--bg:#121418;--fg:#ECEDEF;--muted:#A6AAB3;--line:#2B2F37;--card:#1A1D23;--blue:#8FB4FF;--blue-ink:#0B1530;--der:#1F5BD8;--die:#B91C1C;--das:#0B7A47;--soon:#242830;--soon-ink:#C3C7D0;--b2:#3C4796}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--blue)}
+.flag{display:flex;height:6px}.flag i{flex:1}.flag i:nth-child(1){background:var(--flag1)}.flag i:nth-child(2){background:var(--flag2)}.flag i:nth-child(3){background:var(--flag3)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;gap:12px;padding:18px 0}
+header img{width:44px;height:44px;border-radius:50%}
+header b{font-size:19px;letter-spacing:-.01em}
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;padding:36px 0 28px}
+h1{font-size:clamp(34px,5.4vw,54px);line-height:1.08;letter-spacing:-.025em;margin:0 0 16px}
+.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);margin:0 0 24px;max-width:34em}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 20px;font-weight:650;text-decoration:none;font-size:16px}
+.btn.go{background:var(--blue);color:var(--blue-ink)}
+.btn.soon,.tag.soon{background:var(--soon);color:var(--soon-ink)}
+.word{margin:0;background:var(--paper);color:var(--paper-ink);border:1px solid var(--line);border-radius:22px;padding:26px 24px;box-shadow:0 10px 30px rgba(20,24,32,.06)}
+.word .lv{display:inline-block;color:#fff;font:700 13px/22px system-ui,sans-serif;padding:0 9px;border-radius:7px;background:var(--a2)}
+.word .w{font-size:40px;font-weight:800;letter-spacing:-.02em;margin:12px 0 2px}.word .w span{color:var(--die)}
+.word .ipa{font-size:20px;color:var(--paper-muted);margin-bottom:12px}
+.word dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:16px}.word dt{color:var(--paper-muted)}.word dd{margin:0}
+h2{font-size:clamp(24px,3.4vw,30px);letter-spacing:-.015em;margin:56px 0 8px}
+.sub{color:var(--muted);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.card h3{margin:0;font-size:19px}.card p{margin:0;color:var(--muted);font-size:16px;flex:1}
+.tag{align-self:flex-start;border-radius:999px;padding:6px 14px;font-weight:650;font-size:14px;text-decoration:none}
+.tag.go{background:var(--blue);color:var(--blue-ink)}
+.keys{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 0;padding:0;list-style:none}
+.keys li{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:8px 14px;font-weight:700}
+.der{color:var(--der)}.die{color:var(--die)}.das{color:var(--das)}
+.lvls span{display:inline-block;color:#fff;font:700 14px/26px system-ui,sans-serif;padding:0 10px;border-radius:8px;margin-right:6px}
+.how{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.legal{font-size:14px;color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:64px;padding:24px 0 40px;font-size:15px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media (max-width:760px){.hero{grid-template-columns:1fr;gap:28px;padding-top:12px}.grid,.how{grid-template-columns:1fr}h2{margin-top:44px}}
+</style>
+</head>
+<body>
+<div class="flag" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="wrap">
+<header><img src="logo.png" alt="" width="44" height="44"><b>Einfach Deutsch</b></header>
+
+<section class="hero">
+  <div>
+    <h1>German words, a few minutes a day.</h1>
+    <p class="lead">Every word comes with its article, plural, level and a recording, from A1 to B2. A new short video and a 9-word carousel every day — for English speakers learning German.</p>
+    <div class="btns">
+      <a class="btn go" href="https://www.instagram.com/einfach.deutsch.en/">Follow on Instagram</a>
+      <a class="btn go" href="https://www.youtube.com/@einfachdeutschdaily">Watch on YouTube</a>
+      <span class="btn soon">Telegram · coming soon</span>
+    </div>
+  </div>
+  <figure class="word" aria-label="Example word card">
+    <span class="lv">A2</span>
+    <div class="w"><span>die</span> Kreuzung</div>
+    <div class="ipa">/ˈkʁɔʏtsʊŋ/</div>
+    <dl><dt>English</dt><dd>road junction</dd><dt>Plural</dt><dd>die Kreuzungen</dd><dt>Example</dt><dd>An der Kreuzung ist eine Ampel.</dd></dl>
+  </figure>
+</section>
+
+<h2>Follow along</h2>
+<p class="sub">The same daily rhythm on every channel. No word repeats across them, so following all three means more words, not the same ones twice.</p>
+<div class="grid">
+  <div class="card"><h3>Instagram</h3><p>A Reel and a 9-word carousel every day: hear each word, then save the cards to test yourself.</p><a class="tag go" href="https://www.instagram.com/einfach.deutsch.en/">@einfach.deutsch.en</a></div>
+  <div class="card"><h3>YouTube Shorts</h3><p>One Short a day on <i>Einfach Deutsch · Daily German Words</i>: listen, pause and say each word out loud.</p><a class="tag go" href="https://www.youtube.com/@einfachdeutschdaily">@einfachdeutschdaily</a></div>
+  <div class="card"><h3>Telegram</h3><p>The <i>Einfach Deutsch</i> channel posts words through the day with an evening quiz. A bot will send 10 words a day at your own level.</p><span class="tag soon">Coming soon</span></div>
+</div>
+
+<h2>How the words work</h2>
+<div class="how">
+  <div class="card"><h3>Colour = article</h3><p>The article's colour sticks the gender to the word.</p>
+    <ul class="keys"><li class="der">der</li><li class="die">die</li><li class="das">das</li></ul></div>
+  <div class="card"><h3>Every level, mixed</h3><p>Each set mixes levels from beginner to upper-intermediate, and every word shows its own.</p>
+    <p class="lvls"><span style="background:var(--a1)">A1</span><span style="background:var(--a2)">A2</span><span style="background:var(--b1)">B1</span><span style="background:var(--b2)">B2</span></p></div>
+</div>
+
+<h2>Apps</h2>
+<p class="sub">Free apps for Android first, iPhone later. Store links appear here as soon as they are live.</p>
+<div class="grid">
+  <div class="card"><h3>Lernle</h3><p>Read short German stories, tap any word for its meaning, and review the words you save with spaced repetition.</p><span class="tag soon">Google Play · coming soon</span>
+    <span class="legal"><a href="https://pratiyush.github.io/german-apps-legal/lernle/privacy.html">Privacy</a> · <a href="https://pratiyush.github.io/german-apps-legal/lernle/impressum.html">Impressum</a></span></div>
+  <div class="card"><h3>Wortschatz</h3><p>The most useful German words from A1 to B2, each with its article, plural and a recording.</p><span class="tag soon">Google Play · coming soon</span>
+    <span class="legal"><a href="https://pratiyush.github.io/german-apps-legal/wortschatz/privacy.html">Privacy</a> · <a href="https://pratiyush.github.io/german-apps-legal/wortschatz/impressum.html">Impressum</a></span></div>
+  <div class="card"><h3>More on the way</h3><p>Flashcards for your lock screen, graded stories and more are in the works.</p><span class="tag soon">Coming soon</span></div>
+</div>
+
+<footer>
+  <p>Einfach Deutsch — free German vocabulary for English speakers.</p>
+  <p><a href="https://pratiyush.github.io/german-apps-legal/">Legal notice (Impressum) and privacy</a> · This page sets no cookies and loads nothing from other sites.</p>
+</footer>
+</div>
+</body>
+</html>
